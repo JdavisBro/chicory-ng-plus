@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Chicory NG+ Generator</title>
+    <style>
+        h2 {
+            margin-top: 10vh;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+
+        label {
+            user-select: none;
+        }
+    </style>
+</head>
+<body style="text-align: center;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+    <h1 style="margin-top: 10vh;">Chicory New Game+</h1>
+    <h2>Step 1: Backup your save</h2>
+    <p><a href="file:///%localappdata%/paintdog">Click here</a> (or navigate to "%localappdata%/paintdog") to open file manager in the paintdog folder, copy the "save" folder and name it "save_backup" or something.</p>
+    <h2>Step 2: Open your save</h2>
+    <input type=file id=filein style="padding-left: 3vw;"><p>It's at "%localappdata%/paintdog/save/_playdata"</p>
+    <h2>Step 3: Choose what to carry over</h2>
+    <p>
+        <input type=checkbox id=paintcarry><label for=paintcarry> Paint* </label>
+        <input type=checkbox id=clothingcarry><label for=clothingcarry> Clothing </label>
+        <input type=checkbox id=littercarry><label for=littercarry> Litter </label>
+        <input type=checkbox id=animalscarry><label for=animalscarry> Lost Kids </label>
+        <input type=checkbox id=stampcarry><label for=stampcarry> Brush Styles </label>
+        <input type=checkbox id=furniturecarry><label for=furniturecarry> Furniture </label>
+        <input type=checkbox id=artcarry><label for=artcarry> Art Classes </label>
+    </p>
+    <h2>Step 4: Download new save</h2>
+    <p>
+        <button onclick="downloadSave();">Download _playdata</button>
+        <br><br>
+        Put _playdata in the "%localappdata%/paintdog/save" BUT BE SURE TO BACK UP YOUR SAVE FOLDER FIRST (you should've already).
+        <br>
+        Also if you're NOT carrying paint over, delete the timelapse folder, and if you're NOT carrying art over delete all of the class .png files
+    </p>
+    <p>*choosing paint also gives you the ability to paint on water so that any art that is in water won't be destroyed if you walk onto that screen before you get the water ability</p>
+    <script src="index.js"></script>
+</body>
+</html>
